@@ -1,136 +1,74 @@
-/* মেইন কন্টেইনার */
+/* Footer.css */
 .footer-wrapper {
-  background-color: #0b1120; /* প্রিমিয়াম ডার্ক ব্লু */
+  background-color: #0b1120;
   color: #94a3b8;
-  padding: 80px 0 40px 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: auto;
+  padding: 15px 0; /* প্যাডিং কমিয়ে হাইট কমানো হয়েছে */
+  width: 100%;
+  position: fixed; /* নিচে ফিক্সড রাখার জন্য */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  border-top: 1px solid #1e293b;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
-/* টপ লাইন অ্যানিমেশন */
-.footer-line-gradient {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #3b82f6, #8b5cf6, transparent);
-  margin-bottom: 60px;
-  border-radius: 50%;
-}
-
-/* গ্রিড লেআউট */
 .footer-main-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 60px;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: center; /* কন্টেন্টগুলো মাঝখানে রাখার জন্য */
 }
 
-/* লোগো ও টেক্সট */
-.brand-logo {
-  color: #f8fafc;
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
+.brand-logo { 
+  color: white; 
+  font-size: 18px; /* ফন্ট সাইজ কিছুটা কমানো হয়েছে */
+  font-weight: bold;
 }
-.brand-logo span {
-  color: #3b82f6;
-}
+
+.brand-logo span { color: #3b82f6; }
+
 .brand-text {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #64748b;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
-/* টাইটেল স্টাইল */
 .footer-title {
-  color: #ffffff;
-  font-size: 14px;
+  color: white;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* লিঙ্কস অ্যানিমেশন */
 .nav-links {
   list-style: none;
   padding: 0;
+  display: flex; /* লিঙ্কগুলো পাশাপাশি রাখার জন্য হাইট কমবে */
+  gap: 15px;
 }
-.nav-links li {
-  margin-bottom: 15px;
-}
+
 .nav-links a {
+  font-size: 12px;
   text-decoration: none;
   color: #94a3b8;
-  font-size: 15px;
-  transition: all 0.4s ease;
-}
-.nav-links a:hover {
-  color: #ffffff;
-  transform: translateX(10px);
-  display: inline-block;
 }
 
-/* সোশ্যাল আইকন বক্স */
-.city {
-  font-style: italic;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-.social-links-row {
-  display: flex;
-  gap: 20px;
-}
-.social-box {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.github-btn { background: #1e293b; color: white; border: 1px solid #334155; }
-.linkedin-btn { background: #0077b5; color: white; font-weight: bold; font-size: 18px; }
-
-.social-box:hover {
-  transform: translateY(-10px) rotate(5deg);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
-}
-
-/* নিচের বার */
 .footer-bottom-bar {
-  border-top: 1px solid rgba(51, 65, 85, 0.5);
-  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
-}
-.credit strong { color: #3b82f6; letter-spacing: 1px; }
-
-.sparkle {
-  display: inline-block;
-  animation: shine 2s infinite;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #1e293b;
+  font-size: 11px;
 }
 
-@keyframes shine {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.3); }
-}
-
-/* মোবাইল রেসপনসিভ */
-@media (max-width: 768px) {
-  .footer-main-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .social-links-row { justify-content: center; }
-  .footer-bottom-bar { flex-direction: column; gap: 20px; }
+/* মেইন কন্টেন্ট যাতে ফুটারের নিচে ঢাকা না পড়ে তার জন্য */
+body {
+  padding-bottom: 80px; 
 }
